@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Topwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #back{
+            padding-left: 10px;
+            padding-top: 5px;
+            font-size: 30px;
+            position: fixed;
+        }
+        #head{
+            margin-left:500px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: crimson;
+            padding:10px 90px;
+            border-style: none;
+            border-radius: 20px;
+            position: fixed;
+        }
+
+        #filter{
+            margin-left: 1030px;
+            font-size: 1rem;
+            background-color: rgb(25, 186, 20);
+            color: white;
+            padding:5px 15px;
+            border-color: black;
+            border-radius: 5px;
+        }
+        #filter:hover{
+            
+            padding:5px 19px;
+            background-color: yellow;
+            color: black;
+        }
+        #but{
+            margin-top: 40px;
+        }
+       body{
+            background-color: aliceblue;
+            
+            
+        }
+        #mtr1,#mtr2,#mtr3,#mtr4,#mtr5{
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            flex-direction:row;
+            gap: 5%;
+            margin-top: 40px;
+        }
+        img{
+            width:250px;
+            height: 300px;
+            border-style: none;
+            border-radius: 5px;
+        }
+        img:hover{
+            width:260px;
+            height:320px;
+        }
+        .items button{
+            background-color: black;
+            color: white;
+            border-style: none;
+            border-radius:6px;
+            font-size:1rem;
+            padding: 4px 8px;
+        }
+        .filter{
+            margin-left: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div id="back"><i class="fa-solid fa-circle-arrow-left" onclick="window.location.href='woman.html'"></i></div>
+    <div id="but">
+       <button id="head">Top Wear</button><br>
+       <button id="filter" onclick="filter()">Filter</button>
+   </div><br>
+   <div class="filter">
+    <label for="minPrice">Min Price: ₹<span id="minPriceValue"></span></label>
+    <input type="number" id="minPrice" min="0" max="1000" step="10" oninput="updatePrice()">
+    
+    <label for="maxPrice">Max Price:₹<span id="maxPriceValue"></span></label>
+    <input type="number" id="maxPrice" min="0" max="1000" step="10" oninput="updatePrice()">
+</div><br>
+    <nav class="items">
+      <div id="mtr1">
+         <div class="item" data-price="400.00">
+            <img src="C:\Users\games\OneDrive\Desktop\images\w1.jpeg"/>
+            <h3>Women top</h3>
+            <h3>Price : ₹400.00</h3>
+            <button>Add to Cart</button>
+         </div>
+         <div class="item" data-price="350.00">
+            <img src="C:\Users\games\OneDrive\Desktop\images\w2.jpeg"/>
+            <h3>Women Top</h3>
+            <h3>Price : ₹350.00</h3>
+            <button>Add to Cart</button>
+         </div>
+         <div class="item" data-price="800.00">
+            <img src="C:\Users\games\OneDrive\Desktop\images\w3.jpeg"/>
+            <h3>Women Top</h3>
+            <h3>Price : ₹800.00</h3>
+            <button>Add to Cart</button>
+         </div>
+         <div class="item" data-price="550.00">
+            <img src="C:\Users\games\OneDrive\Desktop\images\w5.jpeg"/>
+            <h3>Women top</h3>
+            <h3>Price : ₹550.00</h3>
+            <button>Add to Cart</button>
+         </div>
+      </div>
+      <div id="mtr2">
+        <div class="item" data-price="1500.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w6.jpeg"/>
+           <h3>Women top</h3>
+           <h3>Price : ₹1500.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="700.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w7.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹700.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="1400.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w8.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹1400.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="380.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w9.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹380.00</h3>
+           <button>Add to Cart</button>
+        </div>
+     </div>
+     <div id="mtr3">
+        <div class="item" data-price="560.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w10.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹560.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="1300.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w11.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹1300.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="1200.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w12.jpeg"/>
+           <h3>Women T-Shirt</h3>
+           <h3>Price : ₹1200.00</h3>
+           <button>Add to Cart</button>
+        </div>
+        <div class="item" data-price="1000.00">
+           <img src="C:\Users\games\OneDrive\Desktop\images\w13.jpeg"/>
+           <h3>Women Top</h3>
+           <h3>Price : ₹1000.00</h3>
+           <button>Add to Cart</button>
+        </div>
+     </div>
+    
+     </nav>
+    
+    <script>
+        function updatePrice() {
+            const minPrice = parseInt(document.getElementById('minPrice').value);
+            const maxPrice = parseInt(document.getElementById('maxPrice').value);
+        
+            document.getElementById('minPriceValue').innerText = minPrice;
+            document.getElementById('maxPriceValue').innerText = maxPrice;
+        
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                const itemPrice = parseInt(item.getAttribute('data-price'));
+                if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    
+    </script>
+</body>
+</html>
