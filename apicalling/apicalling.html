@@ -1,0 +1,192 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <title>Document</title>
+<style>
+    .main{
+        background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+    .box{
+        padding: 2%;
+        height: 450px;
+        width: 250px;
+        border: 2px solid lightslategray;
+        margin: 2%;
+    }
+    .box img{
+        width: 90%;
+        height: auto;
+    }
+</style>
+
+</head>
+<a href="../index1.html" ><i class="fa-solid fa-arrow-left fa-2xl" style="color: #74C0FC;"></i> </a> 
+<body>
+    <div class="main">
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="" alt="">
+            <h2></h2>
+            <h1></h1>
+            <p></p>
+        </div>
+        
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll(".box");
+
+        async function getData(){
+
+            let responce = await fetch("https://dummyjson.com/recipes")
+            let data = await responce.json()
+            //console.log(data)
+
+            console.log(data.rec)
+
+            cards.forEach((element,i)=>{
+                element.getElementsByTagName("img")[0].src=data.recipes[i].image;
+                element.getElementsByTagName("h2")[0].innerHTML=("Name:"+data.recipes[i].name);
+                element.getElementsByTagName("p")[0].innerHTML=data.recipes[i].ingredients.slice(0,2);
+            })
+
+        }
+        getData()
+    </script>
+</body>
+</html>
+    
+
+   
+   
+    
+   
+
+   

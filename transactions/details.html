@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Document</title>
+</head>
+<style>
+    #block{
+        padding-left: 250px;
+    }
+    h1{
+        text-transform: uppercase;
+        text-align: center;
+          height: 50px;
+          padding-top: 10px;
+          font-weight: 800;
+          font-size: 50px;
+        color: rgb(68, 68, 118);
+        margin:50px ; 
+        text-align: center;
+        
+         
+         
+    }
+
+    p{
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 30px;
+        color: white;
+    }
+    h3{
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: white;
+        text-align: center;
+    }
+    input{
+        text-align: center;
+        justify-content: center;
+        border:2px burlywood;
+        border-radius: 30px;
+        width: 170px;
+        height: 40px;
+        margin-top: 20px;
+        color:black;
+       
+    }
+    button{
+        text-align: center;
+        border:2px burlywood;
+        color:black;
+        margin-top: 20px;
+        width: 100px;
+        height: 30px;
+        margin:20px;
+        background-color: white;
+        
+       
+    }.one{
+       
+        text-align: center;
+    }
+       
+    .head{
+        border: 1px solid;
+        border-color: burlywood;
+        border-radius: 50px;
+        width: 800px;
+      
+   
+      align-content: center; 
+    
+      background: linear-gradient(45deg, #92b4c9, #426497, rgb(155, 203, 233));
+        
+    }.head{
+transition: 200ms;
+text-align: center;
+    }
+    
+    
+    h4{
+        border: 2px solid;
+        text-decoration: none;
+        text-align: center;
+    } 
+  
+    h2{
+        color: white;
+        text-align: center;
+    }
+    .cd{
+        text-align: center;
+       
+    }.cd button{
+        width: 150px;
+        border-radius: 50px;
+        border: 1px solid burlywood;
+}.text{
+    text-align: center;
+}
+#block{
+    align-items: center;
+    text-align: center;
+}
+</style>
+<body>
+       <button onclick="window.location.href='dashbord.html'"><i class="fa-solid fa-house">dashbord</i></button>
+        <h1>account details</h1>
+
+
+        <div id="block">
+        <div class="head">
+          
+              <div class="one">
+             
+                <h3>account information</h3>
+                <h2>ACCOUNT HOLDER :swathi priyanka</h2>
+             <h2>ACCOUNT NUMBER : 75936981</h2>
+             <h2>ACCOUNT TYPE : SAVINGS</h2>
+          <h2>BALANCE:<span id="balance">100000</span></h2>
+          <input type = "number" id="amount" placeholder="enteramount"></br>
+          <button id="credit-button">credit money</button>&nbsp;
+          <button id="debit-button">debit money</button>
+
+        
+            
+        <div class="cd">
+
+        <a href="credit.html"><button id="credit-button">credit</button></a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+<a href="debit.html"><button id="debit-button">debit</button></a> </div> 
+</div>   
+    </div>
+    </div>
+
+    <script>
+        const balanceElement = document.getElementById('balance');
+        const amountinput = document.getElementById('amount');
+        const creditButton = document.getElementById('credit-button');
+        const debitButton = document.getElementById('debit-button');
+
+        let balance = 100000;
+         
+        creditButton.addEventListener('click',() =>{
+           const amount = parseInt(amountinput.value);
+            balance += amount ;
+            balanceElement.innerText=balance;
+            amountinput.value = ''
+        })
+
+
+        debitButton.addEventListener('click',() =>{
+           const amount = parseInt(amountinput.value);
+           if(amount > balance) {
+            alet("insufficient balance")
+           }else{
+            balance -= amount;
+              balanceElement.innerText=balance;
+            amountinput.value = ''
+           }
+           
+          
+        })
+    </script>
+</body>
+</html>
